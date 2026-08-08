@@ -247,7 +247,7 @@
       { name:'Artificial Intelligence', cat:'Artificial Intelligence', logo:'assets/logos/ai-logo.png', pct:85 },
       { name:'Deep Learning', cat:'Deep Learning', logo:'assets/logos/Deep-learning-logo.png', pct:82 },
       { name:'Data Science', cat:'Data Science', logo:'assets/logos/machine-learning-logo.png', pct:85 },
-      { name:'NLP', cat:'NLP', logo:'assets/logos/NLP_logo.png', pct:80 },
+      { name:'NLP', cat:'NLP', logo:'assets/logos/NLP.logo.png', pct:80 },
       { name:'Computer Vision', cat:'Computer Vision', logo:'assets/logos/Computer-vision-logo.png', pct:78 },
       { name:'JavaScript', cat:'Frontend Development', logo:'assets/logos/javascript-logo.png', pct:75 },
       { name:'HTML5', cat:'Frontend Development', logo:'assets/logos/HTML5_logo.png', pct:90 },
