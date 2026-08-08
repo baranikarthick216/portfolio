@@ -262,7 +262,7 @@
       { name:'Java', cat:'Programming', logo:'assets/logos/java-logo.png', pct:70 },
       { name:'Cloud Computing', cat:'Cloud Computing', logo:'assets/logos/cloud-logo.webp', pct:74 },
       { name:'ChatGPT', cat:'Generative AI', logo:'assets/logos/ChatGPT-Logo.png', pct:85 },
-      { name:'Claude AI', cat:'Generative AI', logo:'assets/logos/Claude-AI-logo.png', pct:85 }
+      { name:'Claude AI', cat:'Generative AI', logo:'assets/logos/Claude-AI-logo.png', pct:85 },
       { name:'mongodb', cat:'Backend Devlopment', logo:'assets/logos/mongodb-logo.png', pct:90 }
     ];
 
