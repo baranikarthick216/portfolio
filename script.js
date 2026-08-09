@@ -323,7 +323,7 @@
       { name:'CSS3', cat:'Frontend', logo:'assets/logos/CSS3_logo.png', pct:88 },
       { name:'Node.js', cat:'Backend', logo:'assets/logos/node-js-icon.png', pct:72 },
       { name:'SQL', cat:'Database', logo:'assets/logos/sql-logo.webp', pct:82 },
-      { name:'MongoDB', cat:'Database', logo:'assests/logos/mongodb-logo.png', pct:78 },
+      { name:'MongoDB', cat:'Database', logo:'assets/logos/mongodb-logo.png', pct:78 },
       { name:'Artificial Intelligence', cat:'AI', logo:'assets/logos/ai-logo.png', pct:85 },
       { name:'Machine Learning', cat:'AI', logo:'assets/logos/machine-learning-logo.png', pct:88 },
       { name:'Deep Learning', cat:'AI', logo:'assets/logos/Deep-learning-logo.png', pct:82 },
