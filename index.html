@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Barani Karthick">
+<meta name="theme-color" content="#050A0E">
+<title>Barani Karthick | Machine Learning Engineer | AI & Data Science</title>
+<meta name="description" content="AI and Data Science undergraduate specializing in Machine Learning engineering, Artificial Intelligence, NLP, Data Science, full-stack development, and real-world AI applications.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Barani Karthick | Machine Learning Engineer | AI & Data Science">
+<meta property="og:description" content="AI and Data Science undergraduate specializing in Machine Learning engineering, Artificial Intelligence, NLP, Data Science, full-stack development, and real-world AI applications.">
+<meta property="og:image" content="assets/profile.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Barani Karthick | Machine Learning Engineer | AI & Data Science">
+<meta name="twitter:description" content="AI and Data Science undergraduate specializing in Machine Learning engineering, Artificial Intelligence, NLP, Data Science, full-stack development, and real-world AI applications.">
+<meta name="twitter:image" content="assets/profile.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ===================== CURSOR GLOW (desktop only) ===================== -->
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- ===================== LOADING SCREEN ===================== -->
+<div id="loading-screen" role="status" aria-live="polite" aria-label="Loading portfolio">
+  <div class="loading-grid"></div>
+  <canvas id="loading-particles"></canvas>
+
+  <div class="loading-center">
+    <div class="neural-rings">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="bk-logo">
+        <span class="bk-text">BK</span>
+        <div class="bk-sweep"></div>
+      </div>
+    </div>
+
+    <div class="loading-status" id="loading-status">INITIALIZING NEURAL SYSTEM...</div>
+
+    <div class="loading-bar-track">
+      <div class="loading-bar-fill" id="loading-bar-fill"></div>
+    </div>
+    <div class="loading-percent" id="loading-percent">0%</div>
+  </div>
+</div>
+
+<!-- ===================== NEURAL PARTICLES BACKGROUND ===================== -->
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+
+<!-- ===================== STICKY NAV ===================== -->
+<nav id="navbar" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-mark">BK</span>
+      <span class="nav-logo-name">BARANI KARTHICK</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#resume" class="nav-link">Resume</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle light and dark theme" aria-pressed="false"><i class="fa-solid fa-moon"></i></button>
+      <button id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-menu-overlay"></div>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<header id="home" class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb"></div>
+
+  <div class="floating-cards" id="floating-cards" aria-hidden="true">
+    <div class="fcard" data-depth="0.6" style="--dur:4s; top:8%; left:6%;">AI / ML</div>
+    <div class="fcard" data-depth="0.3" style="--dur:4.8s; top:14%; right:8%;">NLP</div>
+    <div class="fcard" data-depth="0.5" style="--dur:5.2s; top:32%; left:2%;">PYTHON</div>
+    <div class="fcard" data-depth="0.4" style="--dur:5.8s; bottom:28%; right:4%;">DATA</div>
+    <div class="fcard" data-depth="0.7" style="--dur:6.2s; bottom:16%; left:8%;">GEN AI</div>
+    <div class="fcard" data-depth="0.35" style="--dur:6.8s; top:46%; right:2%;">COMPUTER VISION</div>
+    <div class="fcard" data-depth="0.55" style="--dur:7.2s; bottom:6%; right:20%;">NEURAL</div>
+    <div class="fcard" data-depth="0.45" style="--dur:5.4s; top:4%; left:34%;">CODE</div>
+    <div class="fcard fcard-stat" data-depth="0.25" style="--dur:6.4s; bottom:38%; left:0%;">7.26</div>
+    <div class="fcard fcard-stat" data-depth="0.28" style="--dur:5.6s; top:60%; right:10%;">2027</div>
+    <div class="fcard" data-depth="0.4" style="--dur:6s; top:26%; left:44%;">MONGODB</div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring"></div>
+      <img src="assets/profile.jpg" alt="Portrait of Barani Karthick" class="hero-photo">
+    </div>
+
+    <p class="hero-eyebrow">SYSTEM ONLINE — AI &amp; DATA SCIENCE</p>
+    <h1 class="hero-name">BARANI <span>KARTHICK</span></h1>
+    <h2 class="hero-role">
+      <span id="typed-role">Machine Learning Engineer</span><span class="cursor" aria-hidden="true">|</span>
+    </h2>
+    <p class="hero-summary">
+      AI and Data Science undergraduate specializing in Machine Learning engineering with hands-on experience
+      building end-to-end machine learning applications, NLP solutions, full-stack projects, and data-driven
+      systems. Passionate about solving real-world problems using Artificial Intelligence and modern technologies.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="assets/resume/Barani_Karthick_Resume.pdf" download class="btn btn-primary">
+        <i class="fa-solid fa-download"></i> Download Resume
+      </a>
+      <a href="#projects" class="btn btn-outline">
+        <i class="fa-solid fa-diagram-project"></i> View Projects
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        <i class="fa-solid fa-envelope"></i> Contact Me
+      </a>
+    </div>
+
+    <div class="hero-socials">
+      <a href="https://github.com/baranikarthick216" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/barani-karthick-m-8a157432a" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:baranikarthick19@gmail.com" aria-label="Send email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:+919087007695" aria-label="Call phone"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-number" data-target="5" data-suffix="+">0</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="3" data-suffix="">0</span>
+        <span class="stat-label">Internships</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="6" data-suffix="+">0</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-decimal="7.26" data-suffix="">0</span>
+        <span class="stat-label">CGPA</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-static="2027">2027</span>
+        <span class="stat-label">Graduating</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="3" data-suffix="+">0</span>
+        <span class="stat-label">Achievements</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll to About section"><i class="fa-solid fa-chevron-down"></i></a>
+</header>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 01 — Identity</p>
+    <h2 class="section-title" id="about-title">About <span>Me</span></h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm Barani Karthick, an AI &amp; Data Science undergraduate at Indra Ganesan College of Engineering,
+          building end-to-end machine learning applications, NLP pipelines, and full-stack systems. My work spans
+          model training and evaluation, data preprocessing, and shipping usable interfaces around the models I build.
+        </p>
+        <p>
+          I'm driven by the challenge of turning messy, real-world data into systems that make decisions —
+          whether that's a chatbot, a resume analyzer, or a fake-news detector. I care about the full pipeline:
+          data, model, and the interface a person actually touches.
+        </p>
+        <div class="about-timeline">
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div><strong>2023 – 2027</strong><p>B.Tech, Artificial Intelligence &amp; Data Science — Indra Ganesan College of Engineering</p></div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div><strong>2025 – 2026</strong><p>Three internships across AI/ML, Full-Stack, and Data Science</p></div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot"></span>
+            <div><strong>Ongoing</strong><p>Building production-style ML &amp; NLP projects, growing an AI/ML professional presence</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card reveal">
+        <h3>Personal Details</h3>
+        <ul class="detail-list">
+          <li><i class="fa-solid fa-user" aria-hidden="true"></i><span>Barani Karthick</span></li>
+          <li><i class="fa-solid fa-brain" aria-hidden="true"></i><span>Machine Learning Engineer | AI &amp; Data Science Student</span></li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Aranthangi, Pudukkottai, Tamil Nadu, India</span></li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>baranikarthick19@gmail.com</span></li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+91 9087007695</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS — NEURAL SKILL MATRIX ===================== -->
+<section id="skills" class="section skills-section" aria-labelledby="skills-title">
+  <div class="neural-bg" id="neural-bg" aria-hidden="true"></div>
+  <div class="section-inner">
+    <p class="eyebrow">// 02 — Capabilities</p>
+    <h2 class="section-title" id="skills-title">Neural Skill <span>Matrix</span></h2>
+    <p class="section-sub">A live map of the tools and models I build with, weighted by working proficiency.</p>
+
+    <div class="skill-grid" id="skill-grid"></div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience" class="section" aria-labelledby="experience-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 03 — Timeline</p>
+    <h2 class="section-title" id="experience-title">Professional <span>Experience</span></h2>
+
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-logo"><img src="assets/logos/akilam-logo.jpg" alt="Akilam Technology LLP logo" loading="lazy"></div>
+        <div class="exp-body">
+          <span class="exp-date">June – July 2026</span>
+          <h3>AI/ML Intern</h3>
+          <p class="exp-company">Akilam Technology LLP</p>
+          <p>Completed an internship mini-project in AI/ML, engineering an AI-powered student assistance chatbot from concept through implementation, applying machine learning and NLP techniques in a real project setting. Recognized by the mentor and organization for sincere, dedicated project work.</p>
+          <a href="assets/certificates/akilam-internship.jpg" class="cert-link" target="_blank" rel="noopener"><i class="fa-solid fa-certificate"></i> View Internship Certificate</a>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-logo"><img src="assets/logos/e-soft-logo.png" alt="E-Soft IT Solutions logo" loading="lazy"></div>
+        <div class="exp-body">
+          <span class="exp-date">December 2025 – February 2026</span>
+          <h3>Full Stack Developer Intern</h3>
+          <p class="exp-company">E-Soft IT Solutions</p>
+          <p>Built responsive frontend components using HTML, CSS, and JavaScript, implemented backend and server-side programming logic to support core application functionality, and connected applications to databases to enable end-to-end web functionality.</p>
+          <a href="assets/certificates/e-soft-internship.jpg" class="cert-link" target="_blank" rel="noopener"><i class="fa-solid fa-certificate"></i> View Internship Certificate</a>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-logo"><img src="assets/logos/judah-logo.png" alt="Judah Code Technologies logo" loading="lazy"></div>
+        <div class="exp-body">
+          <span class="exp-date">June – August 2025</span>
+          <h3>Junior Data Scientist</h3>
+          <p class="exp-company">Judah Code Technologies</p>
+          <p>Analyzed real-world datasets using Python, Pandas, and NumPy, including data cleaning, transformation, and visualization. Preprocessed data and trained baseline machine learning models, applying the core ML workflow end-to-end from data preparation through model evaluation.</p>
+          <a href="assets/certificates/judah-datascience.jpg" class="cert-link" target="_blank" rel="noopener"><i class="fa-solid fa-certificate"></i> View Internship Certificate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 04 — Builds</p>
+    <h2 class="section-title" id="projects-title">Selected <span>Projects</span></h2>
+
+    <div class="project-grid" id="project-grid">
+
+      <div class="project-card reveal" tabindex="0" role="button"
+        data-img="assets/projects/project1.png"
+        data-title="Student Performance Prediction Dashboard"
+        data-desc="Built an end-to-end ML pipeline predicting student exam outcomes from study hours, attendance, and past scores using a dataset of 1,000+ records. Performed data cleaning, EDA, and feature engineering with Pandas and NumPy to identify key performance drivers. Trained and evaluated a Logistic Regression/Random Forest classifier achieving ~85% accuracy, and designed an interactive dashboard to visualize prediction results for non-technical stakeholders."
+        data-tags="Python,Pandas,NumPy,Scikit-learn,EDA">
+        <img src="assets/projects/project1.png" alt="Student Performance Prediction Dashboard screenshot" loading="lazy">
+        <div class="project-overlay">
+          <h3>Student Performance Prediction Dashboard</h3>
+          <div class="project-tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" tabindex="0" role="button"
+        data-img="assets/projects/project2.png"
+        data-title="AI-Powered Student Assistance Chatbot"
+        data-desc="Built an AI chatbot to assist students, developed during an internship with Akilam Technology LLP. Applied NLP and conversational design techniques to support real student queries end-to-end."
+        data-tags="Python,NLP,Chatbot Design">
+        <img src="assets/projects/project2.png" alt="AI-Powered Student Assistance Chatbot screenshot" loading="lazy">
+        <div class="project-overlay">
+          <h3>AI-Powered Student Assistance Chatbot</h3>
+          <div class="project-tags"><span>Python</span><span>NLP</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" tabindex="0" role="button"
+        data-img="assets/projects/project3.png"
+        data-title="AI Resume Analyzer"
+        data-desc="Built an NLP-based resume analyzer that extracts keywords and scores resumes against job descriptions. Designed the keyword-matching logic used to rank candidate fit for a given job posting."
+        data-tags="NLP,Python,Keyword Matching">
+        <img src="assets/projects/project3.png" alt="AI Resume Analyzer screenshot" loading="lazy">
+        <div class="project-overlay">
+          <h3>AI Resume Analyzer</h3>
+          <div class="project-tags"><span>NLP</span><span>Python</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" tabindex="0" role="button"
+        data-img="assets/projects/project4.png"
+        data-title="AI-Powered Healthcare Fake News Detection and Doctor Consultation"
+        data-desc="Built a text-classification model to detect fake medical news articles, with an integrated doctor consultation feature added alongside the detection system."
+        data-tags="Text Classification,NLP,Healthcare AI">
+        <img src="assets/projects/project4.png" alt="AI-Powered Healthcare Fake News Detection and Doctor Consultation screenshot" loading="lazy">
+        <div class="project-overlay">
+          <h3>Healthcare Fake News Detection &amp; Doctor Consultation</h3>
+          <div class="project-tags"><span>NLP</span><span>Classification</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" tabindex="0" role="button"
+        data-img="assets/projects/project5.png"
+        data-title="Encryption and Decryption System"
+        data-desc="Built a secure encryption and decryption application in Python, implementing cryptography algorithms to convert plain text to encrypted format and back."
+        data-tags="Python,Cryptography,Security">
+        <img src="assets/projects/project5.png" alt="Encryption and Decryption System screenshot" loading="lazy">
+        <div class="project-overlay">
+          <h3>Encryption &amp; Decryption System</h3>
+          <div class="project-tags"><span>Python</span><span>Cryptography</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" class="section" aria-labelledby="education-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 05 — Foundation</p>
+    <h2 class="section-title" id="education-title">Education</h2>
+
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <span class="edu-node"></span>
+        <div class="edu-card">
+          <img src="assets/logos/ig-logo.png" alt="Indra Ganesan College of Engineering logo" loading="lazy">
+          <div>
+            <span class="edu-date">2023 – 2027</span>
+            <h3>B.Tech, Artificial Intelligence &amp; Data Science</h3>
+            <p>Indra Ganesan College of Engineering</p>
+            <span class="edu-score">CGPA: 7.26</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-node"></span>
+        <div class="edu-card">
+          <img src="assets/logos/ideal-logo.png" alt="Ideal Matric Higher Secondary School logo" loading="lazy">
+          <div>
+            <span class="edu-date">Higher Secondary</span>
+            <h3>Higher Secondary Education</h3>
+            <p>Ideal Matric Higher Secondary School, Aranthangi, Pudukkottai, Tamil Nadu</p>
+            <span class="edu-score">69%</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="edu-node"></span>
+        <div class="edu-card">
+          <img src="assets/logos/ideal-logo.png" alt="Ideal Matric Higher Secondary School logo" loading="lazy">
+          <div>
+            <span class="edu-date">Secondary</span>
+            <h3>Secondary School Leaving Certificate (SSLC)</h3>
+            <p>Ideal Matric Higher Secondary School</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications" class="section" aria-labelledby="cert-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 06 — Verified</p>
+    <h2 class="section-title" id="cert-title">Certifications</h2>
+
+    <div class="cert-grid" id="cert-grid">
+
+      <div class="cert-card reveal" tabindex="0" role="button"
+        data-img="assets/certificates/akilam-internship.jpg"
+        data-title="Internship with Mini Project (AI/ML)"
+        data-org="Akilam Technology LLP · 2026">
+        <img src="assets/logos/akilam-logo.jpg" alt="Akilam Technology LLP logo" class="cert-org-logo" loading="lazy">
+        <h3>Internship with Mini Project (AI/ML)</h3>
+        <p>Akilam Technology LLP · 2026</p>
+        <div class="cert-actions">
+          <span class="cert-view"><i class="fa-solid fa-eye"></i> Preview</span>
+          <a href="assets/certificates/akilam-internship.jpg" download onclick="event.stopPropagation()"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" tabindex="0" role="button"
+        data-img="assets/certificates/nptel-cloud-computing.jpg"
+        data-title="Cloud Computing"
+        data-org="NPTEL Online Certification, IIT Kharagpur · 2025">
+        <img src="assets/logos/nptel-logo.jpg" alt="NPTEL logo" class="cert-org-logo" loading="lazy">
+        <h3>Cloud Computing</h3>
+        <p>NPTEL Online Certification, IIT Kharagpur · 2025</p>
+        <div class="cert-actions">
+          <span class="cert-view"><i class="fa-solid fa-eye"></i> Preview</span>
+          <a href="assets/certificates/nptel-cloud-computing.jpg" download onclick="event.stopPropagation()"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" tabindex="0" role="button"
+        data-img="assets/certificates/nsdc-certificate.png"
+        data-title="Web Design & Development"
+        data-org="National Skill Development Corporation (NSDC) · 2026">
+        <img src="assets/logos/nsdc-logo.png" alt="NSDC logo" class="cert-org-logo" loading="lazy">
+        <h3>Web Design &amp; Development</h3>
+        <p>National Skill Development Corporation (NSDC) · 2026</p>
+        <div class="cert-actions">
+          <span class="cert-view"><i class="fa-solid fa-eye"></i> Preview</span>
+          <a href="assets/certificates/nsdc-certificate.png" download onclick="event.stopPropagation()"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" tabindex="0" role="button"
+        data-img="assets/certificates/e-soft-internship.jpg"
+        data-title="Full Stack Development Internship"
+        data-org="E-Soft IT Solutions · 2025">
+        <img src="assets/logos/e-soft-logo.png" alt="E-Soft IT Solutions logo" class="cert-org-logo" loading="lazy">
+        <h3>Full Stack Development Internship</h3>
+        <p>E-Soft IT Solutions · 2025</p>
+        <div class="cert-actions">
+          <span class="cert-view"><i class="fa-solid fa-eye"></i> Preview</span>
+          <a href="assets/certificates/e-soft-internship.jpg" download onclick="event.stopPropagation()"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" tabindex="0" role="button"
+        data-img="assets/certificates/judah-datascience.jpg"
+        data-title="Data Science Essentials + Internship"
+        data-org="Judah Code Technologies · 2025">
+        <img src="assets/logos/judah-logo.png" alt="Judah Code Technologies logo" class="cert-org-logo" loading="lazy">
+        <h3>Data Science Essentials + Internship</h3>
+        <p>Judah Code Technologies · 2025</p>
+        <div class="cert-actions">
+          <span class="cert-view"><i class="fa-solid fa-eye"></i> Preview</span>
+          <a href="assets/certificates/judah-datascience.jpg" download onclick="event.stopPropagation()"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" tabindex="0" role="button"
+        data-img="assets/certificates/genai-workshop.jpg"
+        data-title="Generative AI & RAG Workshop"
+        data-org="Kongu Engineering College">
+        <img src="assets/logos/kec-logo.jpg" alt="Kongu Engineering College logo" class="cert-org-logo" loading="lazy">
+        <h3>Generative AI &amp; RAG Workshop</h3>
+        <p>Kongu Engineering College</p>
+        <div class="cert-actions">
+          <span class="cert-view"><i class="fa-solid fa-eye"></i> Preview</span>
+          <a href="assets/certificates/genai-workshop.jpg" download onclick="event.stopPropagation()"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section id="achievements" class="section" aria-labelledby="achieve-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 07 — Milestones</p>
+    <h2 class="section-title" id="achieve-title">Achievements</h2>
+
+    <div class="achieve-grid">
+      <div class="achieve-card reveal">
+        <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+        <h3>Technical Symposium Presentation</h3>
+        <p>Participated in a Technical Symposium and presented AI-related topics.</p>
+      </div>
+      <div class="achieve-card reveal">
+        <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+        <h3>NPTEL Cloud Computing Certification</h3>
+        <p>Completed the Cloud Computing certification from IIT Kharagpur.</p>
+      </div>
+      <div class="achieve-card reveal">
+        <i class="fa-solid fa-robot" aria-hidden="true"></i>
+        <h3>Generative AI Workshop Participation</h3>
+        <p>Participated in a Generative AI &amp; RAG workshop at Kongu Engineering College.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESUME ===================== -->
+<section id="resume" class="section resume-section" aria-labelledby="resume-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 08 — Document</p>
+    <h2 class="section-title" id="resume-title">MY RESUME</h2>
+    <p class="section-sub">The complete record — experience, projects, skills, and education in one file.</p>
+
+    <div class="resume-preview">
+      <embed src="assets/resume/Barani_Karthick_Resume.pdf" type="application/pdf" class="resume-embed" aria-label="Resume PDF preview">
+    </div>
+
+    <div class="hero-buttons resume-buttons">
+      <a href="assets/resume/Barani_Karthick_Resume.pdf" download class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+      </a>
+      <a href="assets/resume/Barani_Karthick_Resume.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+        <i class="fa-solid fa-up-right-from-square"></i> Open Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="section-inner">
+    <p class="eyebrow">// 09 — Connect</p>
+    <h2 class="section-title" id="contact-title">Get In <span>Touch</span></h2>
+    <p class="section-sub">Open to ML Engineering, AI, and Data Science roles &amp; internships.</p>
+
+    <div class="contact-layout">
+      <div class="contact-grid">
+        <a href="mailto:baranikarthick19@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>baranikarthick19@gmail.com</span>
+        </a>
+        <a href="tel:+919087007695" class="contact-card">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+91 9087007695</span>
+        </a>
+        <div class="contact-card contact-card-static">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Aranthangi, Pudukkottai, Tamil Nadu, India</span>
+        </div>
+        <a href="https://github.com/baranikarthick216" target="_blank" rel="noopener" class="contact-card">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span>github.com/baranikarthick216</span>
+        </a>
+        <a href="https://linkedin.com/in/barani-karthick-m-8a157432a" target="_blank" rel="noopener" class="contact-card">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <span>linkedin.com/in/barani-karthick-m</span>
+        </a>
+      </div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name">
+          <span class="form-error" id="err-name"></span>
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email">
+          <span class="form-error" id="err-email"></span>
+        </div>
+        <div class="form-row">
+          <label for="cf-subject">Subject</label>
+          <input type="text" id="cf-subject" name="subject" required>
+          <span class="form-error" id="err-subject"></span>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+          <span class="form-error" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" id="cf-submit">
+          <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE
+        </button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">BK</span>
+      <div>
+        <strong>BARANI KARTHICK</strong>
+        <p>Machine Learning Engineer | AI &amp; Data Science Student</p>
+      </div>
+    </div>
+
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="footer-socials">
+      <a href="https://github.com/baranikarthick216" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/barani-karthick-m-8a157432a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:baranikarthick19@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Barani Karthick. Built from scratch — HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ===================== PROJECT MODAL ===================== -->
+<div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-content">
+    <button class="modal-close" data-close aria-label="Close project preview"><i class="fa-solid fa-xmark"></i></button>
+    <img id="pm-img" src="" alt="">
+    <div class="modal-body">
+      <h3 id="pm-title"></h3>
+      <p id="pm-desc"></p>
+      <div class="modal-tags" id="pm-tags"></div>
+      <div class="modal-links">
+        <span class="btn btn-outline btn-sm disabled"><i class="fa-brands fa-github"></i> GitHub — COMING SOON</span>
+        <span class="btn btn-outline btn-sm disabled"><i class="fa-solid fa-play"></i> Live Demo — COMING SOON</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CERTIFICATE MODAL ===================== -->
+<div id="cert-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cm-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-content modal-content-cert">
+    <button class="modal-close" data-close aria-label="Close certificate preview"><i class="fa-solid fa-xmark"></i></button>
+    <img id="cm-img" src="" alt="">
+    <div class="modal-body">
+      <h3 id="cm-title"></h3>
+      <p id="cm-org"></p>
+      <a id="cm-download" href="" download class="btn btn-primary btn-sm"><i class="fa-solid fa-download"></i> Download Certificate</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
