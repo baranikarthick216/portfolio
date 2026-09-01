@@ -268,7 +268,7 @@ education.forEach(edu => {
 const projects = [
   {
     title: 'Student Performance Prediction Dashboard',
-    image: 'assets/projects/project-01.jpg',
+    image: 'assets/projects/project-1.jpg',
     description: 'End-to-end ML pipeline predicting exam outcomes from study hours, attendance, and past scores across 1,000+ records, with an interactive dashboard for non-technical stakeholders.',
     technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn'],
     github: '#',
@@ -276,7 +276,7 @@ const projects = [
   },
   {
     title: 'AI-Powered Student Assistance Chatbot',
-    image: 'assets/projects/project-02.jpg',
+    image: 'assets/projects/project-2.jpg',
     description: 'An AI chatbot built during an internship with Akilam Technology LLP to assist students with common queries using NLP techniques.',
     technologies: ['Python', 'NLP', 'Machine Learning'],
     github: '#',
@@ -284,7 +284,7 @@ const projects = [
   },
   {
     title: 'AI Resume Analyzer',
-    image: 'assets/projects/project-03.jpg',
+    image: 'assets/projects/project-3.jpg',
     description: 'NLP-based resume analyzer that extracts keywords and scores resumes against job descriptions, with custom keyword-matching logic to rank candidate fit.',
     technologies: ['Python', 'NLP', 'Text Processing'],
     github: '#',
@@ -292,7 +292,7 @@ const projects = [
   },
   {
     title: 'Healthcare Fake News Detection & Doctor Consultation',
-    image: 'assets/projects/project-04.jpg',
+    image: 'assets/projects/project-4.jpg',
     description: 'Text-classification model that detects fake medical news articles, paired with an integrated doctor consultation feature.',
     technologies: ['Python', 'Text Classification', 'ML'],
     github: '#',
@@ -300,7 +300,7 @@ const projects = [
   },
   {
     title: 'Encryption and Decryption System',
-    image: 'assets/projects/project-05.jpg',
+    image: 'assets/projects/project-5.jpg',
     description: 'A secure Python application implementing cryptography algorithms to convert plain text into encrypted format and back.',
     technologies: ['Python', 'Cryptography'],
     github: '#',
