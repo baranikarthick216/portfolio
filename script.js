@@ -187,7 +187,7 @@ const education = [
         course: "B.Tech — Artificial Intelligence and Data Science",
         duration: "2023 – 2027",
         grade: "CGPA: 7.4",
-        logo: "assets/logos/igce.svg",
+        logo: "assets/logos/ig-logo.png",
         description: "Comprehensive undergraduate engineering degree focusing on core machine learning algorithms, deep learning architectures, statistical data modeling, cloud systems, and software engineering principles."
     },
     {
@@ -195,7 +195,7 @@ const education = [
         course: "Higher Secondary Education (HSC)",
         duration: "2022 – 2023",
         grade: "Percentage: 69%",
-        logo: "assets/logos/Ideal.png",
+        logo: "assets/logos/Ideal-logo.png",
         description: "Mathematics, Physics, Chemistry, and Computer Science foundation with a rigorous grounding in analytical reasoning and mathematical computation."
     },
     {
@@ -203,7 +203,7 @@ const education = [
         course: "Secondary School Leaving Certificate (SSLC)",
         duration: "2020 – 2021",
         grade: "Completed",
-        logo: "assets/logos/Ideal.png",
+        logo: "assets/logos/Ideal-logo.png",
         description: "Secondary education establishing academic distinction in core sciences and computational logic."
     }
 ];
