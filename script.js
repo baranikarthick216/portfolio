@@ -186,7 +186,7 @@ const education = [
         institution: "Indra Ganesan College of Engineering",
         course: "B.Tech — Artificial Intelligence and Data Science",
         duration: "2023 – 2027",
-        grade: "CGPA: 7.4",
+        grade: "CGPA: 7.26",
         logo: "assets/logos/ig-logo.png",
         description: "Comprehensive undergraduate engineering degree focusing on core machine learning algorithms, deep learning architectures, statistical data modeling, cloud systems, and software engineering principles."
     },
@@ -232,7 +232,7 @@ const certificates = [
         date: "2025",
         // CHANGE CERTIFICATE IMAGE FILE NAME HERE
         image: "assets/certificates/nptel-cloud-computing.jpg",
-        logo: "assets/logos/nptel.svg",
+        logo: "assets/logos/nptel-cloud-computing-preview.png",
         // CHANGE CREDENTIAL ID HERE
         credential: "NPTEL25CS42S109"
     },
@@ -244,7 +244,7 @@ const certificates = [
         date: "2026",
         // CHANGE CERTIFICATE IMAGE FILE NAME HERE
         image: "assets/certificates/akilam-internship.jpg",
-        logo: "assets/logos/akilam.svg",
+        logo: "assets/logos/akilam-preview.jpg",
         // CHANGE CREDENTIAL ID HERE
         credential: "AK-AIML-2026-984"
     },
@@ -256,7 +256,7 @@ const certificates = [
         date: "2025",
         // CHANGE CERTIFICATE IMAGE FILE NAME HERE
         image: "assets/certificates/e-soft-internship.jpg",
-        logo: "assets/logos/esoft.svg",
+        logo: "assets/logos/esoft-imternship.jpg",
         // CHANGE CREDENTIAL ID HERE
         credential: "ESOFT-FS-2025-115"
     },
@@ -268,7 +268,7 @@ const certificates = [
         date: "2025",
         // CHANGE CERTIFICATE IMAGE FILE NAME HERE
         image: "assets/certificates/judah-datascience.png",
-        logo: "assets/logos/judah.svg",
+        logo: "assets/logos/judah-datascience.jpg",
         // CHANGE CREDENTIAL ID HERE
         credential: "JCT-DS-2025-318"
     },
