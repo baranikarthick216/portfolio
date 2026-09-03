@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barani Karthick | 3D Obsidian Quantum AI Portfolio</title>
+    <meta name="description" content="3D Obsidian Quantum AI Portfolio & Command Center for Barani Karthick — AI & Data Science Student.">
+    <meta property="og:title" content="Barani Karthick | 3D Obsidian Quantum AI Portfolio">
+    <meta property="og:description" content="3D Obsidian Quantum AI Portfolio & Command Center for Barani Karthick — AI & Data Science Student.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <!-- Background & Canvas Layers -->
+    <div class="bg-canvas-container">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+    <div class="bg-ambient-glow"></div>
+    <div class="digital-grid"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Cinematic Boot Loading Screen -->
+    <div id="loading-screen" aria-live="polite">
+        <div class="loader-container">
+            <div class="loader-logo-wrapper">
+                <div class="loader-rings"></div>
+                <div class="loader-rings-inner"></div>
+                <div class="loader-node-dot loader-node-1"></div>
+                <div class="loader-node-dot loader-node-2"></div>
+                <div class="loader-bk-badge">
+                    <span>BK</span>
+                </div>
+            </div>
+            <div class="loader-status-row">
+                <span>QUANTUM_CORE_BOOT</span>
+                <span class="loader-percentage" id="loader-percent">0%</span>
+            </div>
+            <div class="loader-progress-track">
+                <div class="loader-progress-bar" id="loader-bar"></div>
+            </div>
+            <div class="loader-terminal-log" id="loader-log">Initializing AI...</div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="navbar-header">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+        <div class="navbar-container">
+            <a href="#home" class="nav-brand">
+                <div class="brand-icon">BK</div>
+                <span class="brand-name">Barani Karthick</span>
+                <span class="brand-badge">AI / ML</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Certificates</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Obsidian / Light Theme">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Mobile Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+            <a href="#home" class="mobile-nav-link active"><span>Home</span> <span>01</span></a>
+            <a href="#about" class="mobile-nav-link"><span>About</span> <span>02</span></a>
+            <a href="#skills" class="mobile-nav-link"><span>Skills</span> <span>03</span></a>
+            <a href="#experience" class="mobile-nav-link"><span>Experience</span> <span>04</span></a>
+            <a href="#projects" class="mobile-nav-link"><span>Projects</span> <span>05</span></a>
+            <a href="#education" class="mobile-nav-link"><span>Education</span> <span>06</span></a>
+            <a href="#certifications" class="mobile-nav-link"><span>Certifications</span> <span>07</span></a>
+            <a href="#resume" class="mobile-nav-link"><span>Resume</span> <span>08</span></a>
+            <a href="#contact" class="mobile-nav-link"><span>Contact</span> <span>09</span></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal-on-scroll">
+                        <div class="hero-status-pill">
+                            <span class="hero-status-pulse"></span>
+                            <span>AVAILABLE FOR AI/ML & DATA SCIENCE ROLES</span>
+                        </div>
+                        <div class="hero-greeting">&lt;HELLO_WORLD /&gt; I'm</div>
+                        <h1 class="hero-name">Barani Karthick</h1>
+                        <div class="hero-title-badge">
+                            <span>Machine Learning Engineer | AI & Data Science</span>
+                        </div>
+                        <p class="hero-description">
+                            Undergraduate student specializing in Machine Learning, Natural Language Processing, and intelligent full-stack applications. Dedicated to architecting end-to-end data pipelines and solving real-world challenges through artificial intelligence.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Explore Projects
+                            </a>
+                            <a href="assets/resume/Resume.pdf" target="_blank" download="Barani_Karthick_Resume.pdf" class="btn btn-secondary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                Download Resume
+                            </a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                        <div class="hero-tech-pills">
+                            <span class="tech-tag">#ArtificialIntelligence</span>
+                            <span class="tech-tag">#MachineLearning</span>
+                            <span class="tech-tag">#DataScience</span>
+                            <span class="tech-tag">#NLP</span>
+                            <span class="tech-tag">#Python</span>
+                        </div>
+                    </div>
+
+                    <!-- 3D Profile Frame & Holographic Presentation -->
+                    <div class="hero-visual reveal-on-scroll">
+                        <div class="profile-3d-rig" id="profile-3d-rig">
+                            <!-- Background Ambient 3D Glow Aura -->
+                            <div class="profile-ambient-glow"></div>
+
+                            <!-- 3D Orbital Rings System with Orbiting AI Nodes -->
+                            <div class="profile-rings-outer">
+                                <span class="orbital-node node-1"></span>
+                                <span class="orbital-node node-2"></span>
+                            </div>
+                            <div class="profile-rings-middle">
+                                <span class="orbital-node node-3"></span>
+                            </div>
+                            <div class="profile-rings-inner"></div>
+
+                            <!-- Futuristic Holographic Laser Scan Line -->
+                            <div class="profile-scan-line"></div>
+                            
+                            <!-- Floating 3D HUD Badges with Depth -->
+                            <div class="hero-hud-badge hud-top-right">
+                                <span class="hud-icon">⚡</span>
+                                <div>
+                                    <div class="hud-label">ML PIPELINES</div>
+                                    <div class="hud-value">85%+ Accuracy</div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-hud-badge hud-bottom-left">
+                                <span class="hud-icon">🧠</span>
+                                <div>
+                                    <div class="hud-label">NEURAL MODELS</div>
+                                    <div class="hud-value">NLP & Chatbots</div>
+                                </div>
+                            </div>
+
+                            <div class="hero-hud-badge hud-bottom-right">
+                                <span class="hud-icon">🚀</span>
+                                <div>
+                                    <div class="hud-label">AI ARCHITECTURE</div>
+                                    <div class="hud-value">Deep Learning</div>
+                                </div>
+                            </div>
+
+                            <!-- Extended Glass Card with 3D Depth, Lens Flare & Light Reflections -->
+                            <div class="profile-card-glass" id="profile-card-glass">
+                                <div class="profile-card-glare"></div>
+                                <div class="profile-card-border-glow"></div>
+                                <img src="assets/profile.jpg" alt="Barani Karthick" class="profile-image-elem" onerror="handleAssetFallback(this, 'PROFILE', 'Barani Karthick')" />
+                                <div class="profile-hologram-sweep"></div>
+                                <div class="profile-cyber-corners">
+                                    <span class="corner tl"></span>
+                                    <span class="corner tr"></span>
+                                    <span class="corner bl"></span>
+                                    <span class="corner br"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Core Philosophy</div>
+                    <h2 class="section-title">About My Technical Journey</h2>
+                    <p class="section-subtitle">Blending mathematical foundations with modern artificial intelligence to deliver scalable computational models.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-panel card-3d reveal-on-scroll">
+                        <p class="about-intro-p">
+                            I am an AI and Data Science undergraduate student with proven experience developing end-to-end machine learning models, natural language processing pipelines, and full-stack software prototypes.
+                        </p>
+                        <p class="about-intro-p">
+                            Skilled in Python, data cleaning, exploratory data analysis (EDA), predictive modeling, and cloud computing fundamentals, I thrive on transforming complex, unstructured datasets into actionable intelligence.
+                        </p>
+                        <div class="about-stats-grid">
+                            <div class="about-stat-card">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Internships Completed</div>
+                            </div>
+                            <div class="about-stat-card">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">AI & ML Projects</div>
+                            </div>
+                            <div class="about-stat-card">
+                                <div class="stat-number">6+</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 3D Pillars -->
+                    <div class="pillars-grid reveal-on-scroll">
+                        <div class="pillar-card pillar-1 card-3d" data-tilt>
+                            <div class="pillar-icon-box">🎯</div>
+                            <h3 class="pillar-title">Problem Solver</h3>
+                            <p class="pillar-desc">Analytical approach to decomposing complex computational problems into elegant mathematical pipelines.</p>
+                        </div>
+                        <div class="pillar-card pillar-2 card-3d" data-tilt>
+                            <div class="pillar-icon-box">⚡</div>
+                            <h3 class="pillar-title">Quick Learner</h3>
+                            <p class="pillar-desc">Rapidly mastering state-of-the-art AI architectures, frameworks, and cutting-edge paradigms.</p>
+                        </div>
+                        <div class="pillar-card pillar-3 card-3d" data-tilt>
+                            <div class="pillar-icon-box">🤝</div>
+                            <h3 class="pillar-title">Team Player</h3>
+                            <p class="pillar-desc">Collaborative mindset with strong communication across cross-functional engineering teams.</p>
+                        </div>
+                        <div class="pillar-card pillar-4 card-3d" data-tilt>
+                            <div class="pillar-icon-box">💡</div>
+                            <h3 class="pillar-title">Creative Thinker</h3>
+                            <p class="pillar-desc">Designing innovative technological solutions that combine machine intelligence with human intuition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Tech Stack</div>
+                    <h2 class="section-title">AI Technology Stack Dashboard</h2>
+                    <p class="section-subtitle">Core toolsets, frameworks, and libraries utilized across machine learning and full-stack engineering.</p>
+                </div>
+
+                <div class="skills-filter-nav reveal-on-scroll">
+                    <button class="skill-filter-btn active" data-filter="all">All Technologies</button>
+                    <button class="skill-filter-btn" data-filter="ai">AI & Machine Learning</button>
+                    <button class="skill-filter-btn" data-filter="programming">Programming & Dev</button>
+                    <button class="skill-filter-btn" data-filter="data">Data & Cloud</button>
+                    <button class="skill-filter-btn" data-filter="tools">Tools & Platforms</button>
+                </div>
+
+                <div class="skills-grid" id="skills-container"></div>
+            </div>
+        </section>
+
+        <!-- 4. Experience / Internships Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Career Path</div>
+                    <h2 class="section-title">Professional Experience & Internships</h2>
+                    <p class="section-subtitle">Hands-on industry exposure building AI chatbots, data pipelines, and responsive web applications.</p>
+                </div>
+
+                <div class="timeline-container" id="internships-container"></div>
+            </div>
+        </section>
+
+        <!-- 5. Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Innovations</div>
+                    <h2 class="section-title">3D AI Project Lab</h2>
+                    <p class="section-subtitle">Featured end-to-end machine learning pipelines, NLP applications, and algorithmic security engines.</p>
+                </div>
+
+                <div class="projects-grid" id="projects-container"></div>
+            </div>
+        </section>
+
+        <!-- 6. Education Section -->
+        <section id="education">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Academics</div>
+                    <h2 class="section-title">Educational Milestones</h2>
+                    <p class="section-subtitle">Academic foundations in Artificial Intelligence, Data Science, and Computer Science.</p>
+                </div>
+
+                <div class="timeline-container" id="education-container"></div>
+            </div>
+        </section>
+
+        <!-- 7. Certifications Section -->
+        <section id="certifications">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Validations</div>
+                    <h2 class="section-title">Holographic Certificate Gallery</h2>
+                    <p class="section-subtitle">Verified technical certifications in Cloud Computing, AI/ML, and Web Development.</p>
+                </div>
+
+                <div class="certs-grid" id="certificates-container"></div>
+            </div>
+        </section>
+
+        <!-- 8. Resume Section -->
+        <section id="resume">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Document</div>
+                    <h2 class="section-title">Digital Resume Dossier</h2>
+                    <p class="section-subtitle">Comprehensive overview of academic achievements, technical proficiencies, and career milestones.</p>
+                </div>
+
+                <div class="resume-dossier-card card-3d reveal-on-scroll" data-tilt>
+                    <div class="resume-preview-panel">
+                        <div class="resume-icon-badge">📄</div>
+                        <h3 class="resume-doc-title">Barani Karthick M — Curriculum Vitae</h3>
+                        <p class="resume-doc-sub">Machine Learning Engineer | AI & Data Science</p>
+                        <div class="badge-row">
+                            <span class="skill-badge">UPDATED 2026</span>
+                            <span class="skill-badge">PDF DOSSIER</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-content-panel">
+                        <ul class="resume-highlights-list">
+                            <li><span>✓</span> Specialized in ML pipelines, NLP, and Predictive Modeling</li>
+                            <li><span>✓</span> 3 Industry Internships with hands-on AI deployment</li>
+                            <li><span>✓</span> Solid foundation in Python, Scikit-learn, SQL, and Full-Stack</li>
+                            <li><span>✓</span> Verified NPTEL, NSDC, and Workshop Certifications</li>
+                        </ul>
+
+                        <!-- Verified Organization Logos Strip -->
+                        <div class="resume-verified-logos-wrap">
+                            <span class="resume-verified-title">VERIFIED AFFILIATION LOGO SPACES:</span>
+                            <div class="resume-logo-pods-row">
+                                <div class="resume-logo-pod" title="National Skill Development Corporation">
+                                    <img src="assets/logos/nsdc.svg" alt="NSDC" onerror="handleAssetFallback(this, 'LOGO', 'NSDC')" />
+                                </div>
+                                <div class="resume-logo-pod" title="NPTEL (IIT Kharagpur)">
+                                    <img src="assets/logos/nptel.svg" alt="NPTEL" onerror="handleAssetFallback(this, 'LOGO', 'NPTEL')" />
+                                </div>
+                                <div class="resume-logo-pod" title="Akilam Technology LLP">
+                                    <img src="assets/logos/akilam.svg" alt="Akilam" onerror="handleAssetFallback(this, 'LOGO', 'Akilam')" />
+                                </div>
+                                <div class="resume-logo-pod" title="Indra Ganesan College of Engineering">
+                                    <img src="assets/logos/igce.svg" alt="IGCE" onerror="handleAssetFallback(this, 'LOGO', 'IGCE')" />
+                                </div>
+                                <div class="resume-logo-pod" title="E-Soft IT Solutions">
+                                    <img src="assets/logos/esoft.svg" alt="E-Soft" onerror="handleAssetFallback(this, 'LOGO', 'E-Soft')" />
+                                </div>
+                                <div class="resume-logo-pod" title="Judah Code Technologies">
+                                    <img src="assets/logos/judah.svg" alt="Judah" onerror="handleAssetFallback(this, 'LOGO', 'Judah')" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-actions-row">
+                            <a href="assets/resume/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                View Resume
+                            </a>
+                            <a href="assets/resume/Resume.pdf" download="Barani_Karthick_Resume.pdf" class="btn btn-secondary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><span class="section-tag-dot"></span> Connectivity</div>
+                    <h2 class="section-title">AI Communication Hub</h2>
+                    <p class="section-subtitle">Reach out for collaborations, research opportunities, internships, or technical inquiries.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel reveal-on-scroll">
+                        <a href="mailto:baranikarthick19@gmail.com" class="contact-card">
+                            <div class="contact-icon-box">✉</div>
+                            <div>
+                                <div class="contact-meta-label">Direct Email</div>
+                                <div class="contact-meta-val">baranikarthick19@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a href="tel:+919087007695" class="contact-card">
+                            <div class="contact-icon-box">📞</div>
+                            <div>
+                                <div class="contact-meta-label">Phone</div>
+                                <div class="contact-meta-val">+91 90870 07695</div>
+                            </div>
+                        </a>
+
+                        <div class="contact-card">
+                            <div class="contact-icon-box">📍</div>
+                            <div>
+                                <div class="contact-meta-label">Location</div>
+                                <div class="contact-meta-val">Aranthangi, Pudukkottai, Tamil Nadu</div>
+                            </div>
+                        </div>
+
+                        <a href="https://linkedin.com/in/barani-karthick-m-8a157432a" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-icon-box">🔗</div>
+                            <div>
+                                <div class="contact-meta-label">LinkedIn</div>
+                                <div class="contact-meta-val">linkedin.com/in/barani-karthick-m-8a157432a</div>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/baranikarthick216" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-icon-box">💻</div>
+                            <div>
+                                <div class="contact-meta-label">GitHub</div>
+                                <div class="contact-meta-val">github.com/baranikarthick216</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel card-3d reveal-on-scroll">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="form-name" class="form-label">FULL NAME</label>
+                                <input type="text" id="form-name" class="form-input" placeholder="Your Name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email" class="form-label">EMAIL ADDRESS</label>
+                                <input type="email" id="form-email" class="form-input" placeholder="name@company.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message" class="form-label">COMMUNICATION MESSAGE</label>
+                                <textarea id="form-message" class="form-textarea" placeholder="Describe your project, opportunity, or inquiry..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                Transmit Message
+                            </button>
+                            <div id="contact-alert" class="form-status-alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="nav-brand">
+                        <div class="brand-icon">BK</div>
+                        <span class="brand-name">Barani Karthick</span>
+                    </div>
+                    <p class="footer-tagline">Building intelligent digital experiences through AI, Data Science, and modern engineering.</p>
+                </div>
+
+                <div class="footer-social-links">
+                    <a href="https://github.com/baranikarthick216" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/barani-karthick-m-8a157432a" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="mailto:baranikarthick19@gmail.com" class="social-icon-btn" title="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <div>© 2026 Barani Karthick. All Rights Reserved.</div>
+                <div>3D Obsidian Quantum AI Architecture</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Full Screen Modal Preview -->
+    <div id="cert-modal" class="preview-modal-overlay" onclick="if(event.target === this) closeCertificateModal()">
+        <div class="preview-modal-card">
+            <div class="modal-header-bar">
+                <h4 class="modal-title" id="modal-cert-title">Certificate Preview</h4>
+                <button class="modal-close-btn" onclick="closeCertificateModal()" title="Close">✕</button>
+            </div>
+            <div class="modal-media-frame">
+                <img id="modal-cert-img" src="" alt="Certificate Preview" class="modal-img-elem" />
+            </div>
+            <div class="modal-footer-bar">
+                <button class="btn btn-secondary btn-sm" onclick="closeCertificateModal()">Close</button>
+                <button class="btn btn-primary btn-sm" id="modal-open-tab">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Open in New Tab
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Master Script -->
+    <script src="script.js"></script>
+</body>
+</html>
