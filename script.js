@@ -195,7 +195,7 @@ const education = [
         course: "Higher Secondary Education (HSC)",
         duration: "2022 – 2023",
         grade: "Percentage: 69%",
-        logo: "assets/logos/ideal-school.svg",
+        logo: "assets/logos/Ideal.png",
         description: "Mathematics, Physics, Chemistry, and Computer Science foundation with a rigorous grounding in analytical reasoning and mathematical computation."
     },
     {
@@ -203,7 +203,7 @@ const education = [
         course: "Secondary School Leaving Certificate (SSLC)",
         duration: "2020 – 2021",
         grade: "Completed",
-        logo: "assets/logos/ideal-school.svg",
+        logo: "assets/logos/Ideal.png",
         description: "Secondary education establishing academic distinction in core sciences and computational logic."
     }
 ];
